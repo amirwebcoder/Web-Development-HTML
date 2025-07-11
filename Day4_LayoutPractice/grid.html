@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Grid Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f7f7f7;
+        }
+        header, footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        .services-section {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2rem;
+            place-items: stretch center;
+        }
+        .service-card {
+            background: #f0f4fa;
+            border-radius: 8px;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #3a7bd5;
+        }
+        .service-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .service-desc {
+            font-size: 1rem;
+            color: #555;
+        }
+        @media (max-width: 700px) {
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Services (Grid)</h1>
+    </header>
+    <section class="services-section">
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-icon">💻</div>
+                <div class="service-title">Web Development</div>
+                <div class="service-desc">Modern, responsive websites built for your business needs.</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <div class="service-title">App Design</div>
+                <div class="service-desc">Beautiful and intuitive mobile app interfaces for all platforms.</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">☁️</div>
+                <div class="service-title">Cloud Solutions</div>
+                <div class="service-desc">Scalable cloud infrastructure and deployment services.</div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Haevix Tech. All rights reserved.</p>
+    </footer>
+</body>
+</html>
