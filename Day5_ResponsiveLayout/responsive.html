@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 Responsive Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+        header {
+            background: #2d3e50;
+            color: #fff;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .sidebar {
+            flex: 1;
+            background: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+        .main {
+            flex: 3;
+            background: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+        footer {
+            background: #2d3e50;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        /* Tablet: ≤ 1024px */
+        @media (max-width: 1024px) {
+            .container {
+                gap: 1rem;
+                padding: 1rem;
+            }
+            header, footer {
+                padding: 1rem;
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Mobile: ≤ 768px */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 0.5rem;
+            }
+            .sidebar, .main {
+                padding: 0.5rem;
+                font-size: 1rem;
+            }
+            header, footer {
+                font-size: 1rem;
+                padding: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Responsive Layout Example</h1>
+        <p>Resize the browser to see responsiveness!</p>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+            <p>This is the sidebar content. On mobile, it stacks above the main content.</p>
+        </aside>
+        <main class="main">
+            <h2>Main Content</h2>
+            <p>
+                This is the main area. Layout, spacing, and font sizes adjust for tablet and mobile screens using media queries.
+            </p>
+            <ul>
+                <li>Uses Flexbox for layout</li>
+                <li>Media queries for ≤ 1024px and ≤ 768px</li>
+                <li>Viewport meta tag for scaling</li>
+            </ul>
+        </main>
+    </div>
+    <footer>
+        &copy; 2025 Haevix Tech Training
+    </footer>
+</body>
+</html>
